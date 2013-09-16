@@ -134,13 +134,13 @@
       }
       addRepos();
 
-      $.getJSON("https://api.github.com/users/tinywall/members?callback=?", function (result) {
+      /*$.getJSON("https://api.github.com/users/tinywall/members?callback=?", function (result) {
         var members = result.data;
 
         $(function () {
           $("#num-members").text(members.length);
         });
-      });
+      });*/
 
       function randomItem(array) {
         return array[Math.floor(Math.random() * array.length)];
@@ -247,7 +247,7 @@
           <p>
             <a href="https://github.com/tinywall/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
             <br>
-            <a href="https://github.com/tinywall?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
+            <!--<a href="https://github.com/tinywall?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>-->
           </p>
           <p class="email"><a href="mailto:opensource@tinywall.com">opensource@tinywall.com</a></p>
         </div>
