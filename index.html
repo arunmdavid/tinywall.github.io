@@ -26,8 +26,8 @@
 
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
-        "paperwhite": "https://tinywall.github.io/paperwhite/";
-        "scrollzip": "https://tinywall.github.io/scrollzip/";
+        "paperwhite": "http://tinywall.github.io/paperwhite/";
+        "scrollzip": "http://tinywall.github.io/scrollzip/";
       };
 
       function repoUrl(repo) {
@@ -135,7 +135,7 @@
       }
       addRepos();
 
-      $.getJSON("https://api.github.com/users/tinywall/members?callback=?", function (result) {
+      $.getJSON("https://api.github.com/orgs/tinywall/members?callback=?", function (result) {
         var members = result.data;
 
         $(function () {
