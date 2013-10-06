@@ -26,7 +26,8 @@
 
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
-        "paperwhite": "http://tinywall.github.com/paperwhite/"
+        "paperwhite": "http://tinywall.github.io/paperwhite/";
+        "scrollzip": "http://tinywall.github.io/scrollzip/";
       };
 
       function repoUrl(repo) {
@@ -35,8 +36,8 @@
 
       // Put custom repo descriptions in this object, keyed by repo name.
       var repoDescriptions = {
-        "bootstrap": "An HTML, CSS, and JS toolkit designed to kickstart development of webapps and sites",
-        "naggati2": "A protocol builder for Netty using Scala 2.8"
+        "paperwhite": "Free minimal responsive website template",
+        "scrollzip": "jQuery plugin to trigger action if element is visible while scrolling"
       };
 
       function repoDescription(repo) {
@@ -134,13 +135,13 @@
       }
       addRepos();
 
-      /*$.getJSON("https://api.github.com/users/tinywall/members?callback=?", function (result) {
+      $.getJSON("https://api.github.com/users/tinywall/members?callback=?", function (result) {
         var members = result.data;
 
         $(function () {
           $("#num-members").text(members.length);
         });
-      });*/
+      });
 
       function randomItem(array) {
         return array[Math.floor(Math.random() * array.length)];
@@ -237,8 +238,8 @@
         <div id="logo"><h1>Twitter Open Source</h1></div>
         <h1>Tinywall is built on open source software.</h1>
         <p>Want to help? <a href="https://github.com/tinywall">Join the Flock</a></p>
-        <p>Visit <a href="https://tinywall.net/">tinywall.net</a></p>
-        <p><a href="https://tinywall.com/resources">Logos and other goodies</a></p>
+        <p>Visit <a href="http://tinywall.com/">tinywall.com</a></p>
+        <p><a href="http://tinywall.com/resources">Logos and other goodies</a></p>
       </div>
 
       <div class="grid grid-3">
@@ -247,7 +248,7 @@
           <p>
             <a href="https://github.com/tinywall/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
             <br>
-            <!--<a href="https://github.com/tinywall?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>-->
+            <a href="https://github.com/tinywall?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
           </p>
           <p class="email"><a href="mailto:opensource@tinywall.com">opensource@tinywall.com</a></p>
         </div>
