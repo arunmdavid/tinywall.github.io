@@ -27,8 +27,14 @@
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
         "paperwhite": "http://tinywall.github.io/paperwhite/",
-        "scrollzip": "http://tinywall.github.io/scrollzip/"
+        "scrollzip": "http://tinywall.github.io/scrollzip/",
+        "tinywall.github.io": "http://tinywall.github.io/",
+        "typeninja": "http://tinywall.github.io/typeninja/"
       };
+
+      var blackList =  [
+        "androidapp1","tinywallin","tinywallorg","tinywallcom","tinywallnet"
+      ];
 
       function repoUrl(repo) {
         return repoUrls[repo.name] || repo.html_url;
@@ -116,7 +122,9 @@
               });
 
               $.each(repos, function (i, repo) {
-                addRepo(repo);
+                if($.inArray(repo.name,blackList)==-1){
+                  addRepo(repo);
+                }
               });
 
               // Sort by most-recently pushed to.
